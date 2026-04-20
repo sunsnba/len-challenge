@@ -15,7 +15,7 @@ const Hero = () => {
         </div>
 
         <h1 className="hero__heading">
-          A better way to <span>ship web apps</span>
+          A better way to <span>ship&nbsp;web&nbsp;apps</span>
         </h1>
 
         <p className="hero__body">
