@@ -71,3 +71,5 @@ npm run dev
 The app will be available at:
 
 http://localhost:5173
+
+<img width="1470" height="878" alt="Screenshot 2026-04-20 at 3 15 29 PM" src="https://github.com/user-attachments/assets/b79f4bcf-2881-4355-84d7-acd1b23c317c" />
