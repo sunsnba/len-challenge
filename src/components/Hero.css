@@ -1,0 +1,263 @@
+/* 1. BASE STYLES & DESKTOP DEFAULT */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 48px;
+  padding-top: 56px;
+  padding-bottom: 32px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.hero__content {
+  width: 592px;
+}
+
+.hero__pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+  background: #000000;
+  border-radius: 14px;
+  padding: 4px 8px 4px 4px;
+  width: fit-content;
+}
+
+.hero__badge {
+  background: #6366f1;
+  color: #ffffff;
+  border-radius: 10px;
+  padding: 2px 12px;
+  font-size: 12px;
+  line-height: 20px;
+  font-weight: 500;
+  letter-spacing: 2.5px;
+  flex-shrink: 0;
+}
+
+.hero__pill-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #ffffff;
+  font-size: 14px;
+  line-height: 20px;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.hero__pill-link img {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.hero__heading {
+  margin-top: 24px;
+  margin-bottom: 24px;
+  font-size: clamp(56px, 5vw, 72px);
+  line-height: 1.15;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: #ffffff;
+}
+
+.hero__heading span {
+  background: linear-gradient(to right, #818cf8, #a5b4fc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero__body {
+  margin-top: 0;
+  max-width: 500px;
+  color: #d1d5db;
+  font-size: 18px;
+  line-height: 28px;
+}
+
+.hero__form {
+  display: flex;
+  gap: 12px;
+  align-items: stretch;
+  margin-top: 32px;
+  width: 576px;
+}
+
+.hero__input {
+  width: 425px;
+  height: 48px;
+  border: none;
+  border-radius: 6px;
+  padding: 12px 16px;
+  background: #ffffff;
+  color: #111827;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+.hero__input::placeholder {
+  color: #6b7280;
+}
+
+.hero__submit {
+  width: 139px;
+  height: 48px;
+  border: none;
+  border-radius: 6px;
+  background: #6366f1;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 500;
+  box-sizing: border-box;
+}
+
+.hero__helper {
+  margin-top: 16px;
+  max-width: 576px;
+  color: #d1d5db;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.hero__helper a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.hero__image-wrap {
+  width: 592px;
+  height: 624px;
+  overflow: hidden;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.hero__image {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* 2. MOBILE OVERRIDES (< 834px) */
+@media (max-width: 833px) {
+  .hero {
+    flex-direction: column;
+    gap: 40px;
+    padding-top: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .hero__content,
+  .hero__image-wrap {
+    width: 100%;
+    max-width: 344px;
+  }
+
+  .hero__heading {
+    font-size: 40px;
+    line-height: 48px;
+  }
+
+  .hero__body {
+    margin-bottom: 64px;
+  }
+
+  .hero__form {
+    flex-direction: column;
+    width: 100%;
+    margin-top: 0;
+  }
+
+  .hero__input,
+  .hero__submit {
+    width: 100%;
+  }
+
+  .hero__image-wrap {
+    height: auto;
+    overflow: visible;
+  }
+
+  .hero__image {
+    position: relative;
+    height: auto;
+  }
+}
+
+/* 3. TABLET OVERRIDES (834px - 1079px) */
+@media (min-width: 834px) and (max-width: 1079px) {
+  .hero {
+    gap: 24px;
+    padding-top: 64px;
+    align-items: center;
+  }
+
+  .hero__content {
+    width: 55%;
+  }
+
+  .hero__image-wrap {
+    width: 45%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: visible;
+  }
+
+  .hero__image {
+    position: relative; /* Breaks absolute positioning */
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    right: auto;
+    top: auto;
+  }
+
+  .hero__heading {
+    font-size: 44px;
+    line-height: 52px;
+  }
+
+  .hero__form {
+    max-width: 100%;
+  }
+}
+
+/* 4. LAPTOP OVERRIDES (1080px - 1439px) */
+@media (min-width: 1080px) and (max-width: 1439px) {
+  .hero {
+    gap: 40px;
+    padding-top: 64px;
+  }
+
+  .hero__content {
+    width: 48%;
+  }
+
+  .hero__image-wrap {
+    width: 52%;
+    height: 480px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero__image {
+    position: absolute;
+    object-fit: cover;
+  }
+
+  .hero__heading {
+    font-size: 56px;
+    line-height: 64px;
+  }
+}
