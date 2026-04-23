@@ -97,8 +97,8 @@
   opacity: 0;
   pointer-events: none;
   transition:
-    top 500ms ease-in-out,
-    opacity 500ms ease-in-out;
+    top 300ms ease-in-out,
+    opacity 300ms ease-in-out;
   z-index: 40;
 }
 
