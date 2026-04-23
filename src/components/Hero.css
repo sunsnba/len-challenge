@@ -155,7 +155,7 @@
 }
 
 /* 2. MOBILE OVERRIDES (< 834px) */
-@media (max-width: 833px) {
+@media (max-width: 819px) {
   .hero {
     flex-direction: column;
     gap: 40px;
@@ -206,7 +206,7 @@
 }
 
 /* 3. TABLET OVERRIDES (834px - 1079px) */
-@media (min-width: 834px) and (max-width: 1079px) {
+@media (min-width: 819px) and (max-width: 1079px) {
   .hero {
     gap: 24px;
     padding-top: 64px;

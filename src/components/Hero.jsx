@@ -1,8 +1,17 @@
+import { useState } from 'react';
 import './Hero.css';
 import illustration from '../assets/hero-illustration.svg';
 import chevron from '../assets/icon-chevron-right.svg';
 
 const Hero = () => {
+
+  const [email, setEmail] = useState('');
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(email);
+  };
+
   return (
     <section className="hero">
       <div className="hero__content">
@@ -23,11 +32,14 @@ const Hero = () => {
           cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat.
         </p>
 
-        <form className="hero__form">
+        <form className="hero__form" onSubmit={handleSubmit}>
           <input
             type="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
             placeholder="Enter your email"
             className="hero__input"
+            required
           />
           <button type="submit" className="hero__submit">
             Start free trial

@@ -178,7 +178,7 @@
 }
 
 /* mobile only */
-@media (max-width: 833px) {
+@media (max-width: 819px) {
   .header {
     height: 56px;
     padding-top: 16px;
@@ -216,7 +216,7 @@
 }
 
 /* hide mobile drawer on tablet/desktop */
-@media (min-width: 834px) {
+@media (min-width: 819px) {
   .mobile-menu-overlay,
   .mobile-menu-drawer {
     display: none;
